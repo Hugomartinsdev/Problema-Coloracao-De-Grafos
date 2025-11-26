@@ -90,5 +90,5 @@ nx.draw(
     font_weight='bold',
     edge_color='gray'
 )
-plt.savefig("teste2.png")
+plt.savefig("welshPowell.png")
 plt.show()
