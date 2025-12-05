@@ -19,7 +19,7 @@ def welsh_powell(grafo):
     # 2. Inicializa o mapa de cores como um DICIONÁRIO
     mapa_cores = {v: -1 for v in grafo.keys()}
     
-    cor_atual = 0 #começa no 0 para ele pegar a primeira cor do vetor da paleta
+    cor_atual = 0 #começa no 0 para ser melhor a contagem
     
     #Faz a varredura do vetor
     for v in vertices_ordenados:
@@ -39,20 +39,21 @@ def welsh_powell(grafo):
             
     return mapa_cores
 
+#função que calcular o X(G), ou seja o menor número de cores uilizadas possiveis
 def numero_cromatico_itertools(grafo):
     vertices = list(grafo.keys())
     n = len(vertices)
 
-    # Converte grafo p/ índice (muito mais rápido)
+    # Converte grafo p/ índice ou seja inteiro
     idx = {v: i for i, v in enumerate(vertices)}
 
-    # Lista de adjacência indexada
+    # Matriz de adjacência indexada
     adj = [[] for _ in range(n)]
     for v in vertices:
         for viz in grafo[v]:
             adj[idx[v]].append(idx[viz])
 
-    # Tentar de k=1 até k=n cores
+    # Tentar de k=1 até k=n cores,para ver menor número de cores possiveis
     for k in range(1, n + 1):
         # Gera todas as colorações possíveis com k cores
         for coloracao in itertools.product(range(k), repeat=n):
@@ -67,7 +68,7 @@ def numero_cromatico_itertools(grafo):
                 if not valido:
                     break
             if valido:
-                return k  # achou o χ(G)
+                return k  # achou o χ(G), menor número de cores possiveis
     return n
 
 
