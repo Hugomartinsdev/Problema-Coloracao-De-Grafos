@@ -15,3 +15,6 @@ Para mostrar o grafo foram usadas as bibliotecas:
       <li>matplotlib.pyplot</li>
       <li>networkx</li>
 </ul>
+
+## Como rodar
+As importações são feitas no proprio codigo não precisando de um requeriment.txt ou comando no cmd.Para iniciar o codigo só precisar iniciar o código e ele rodará normalmente
