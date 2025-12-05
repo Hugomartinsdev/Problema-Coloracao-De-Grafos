@@ -173,4 +173,4 @@ nx.draw(
 #plt.savefig("welshPowellString.png")
 plt.savefig("welshPowellInt.png")
 #Mostra em uma iagem, sem salvar o arquivo, o grafo
-plt.show()
+#plt.show()
