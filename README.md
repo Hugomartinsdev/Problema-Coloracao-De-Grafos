@@ -17,4 +17,9 @@ Para mostrar o grafo foram usadas as bibliotecas:
 </ul>
 
 ## Como rodar
-As importações são feitas no proprio codigo não precisando de um requeriment.txt ou comando no cmd.Para iniciar o codigo só precisar iniciar o código e ele rodará normalmente
+rodar no cmd os comandos
+
+<ul>
+      <li>pip install networkx</li>
+</ul> 
+apos isso  inicie normalmente o codigo e ele rodará normalmente
